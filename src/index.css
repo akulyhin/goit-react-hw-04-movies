@@ -35,3 +35,21 @@ code {
 .Navigation-link.active {
   color: palevioletred;
 }
+
+.movie-details {
+  display: flex;
+}
+
+.image {
+  width: 25%;
+}
+
+.image img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.content {
+  margin-left: 20px;
+  width: 65%;
+}

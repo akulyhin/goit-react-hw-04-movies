@@ -19,7 +19,7 @@ export default class Home extends Component {
 
     return (
       <div>
-        <h1>Trending today</h1>
+        <h1>В тренде сегодня</h1>
         {movies.length > 0 && (
           <ul>
             {movies.map((movie) => (

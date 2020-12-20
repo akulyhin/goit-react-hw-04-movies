@@ -14,7 +14,7 @@ export default class Navigation extends Component {
               className="Navigation-link"
               activeClassName="active"
             >
-              Home
+              Главная
             </NavLink>
           </li>
           <li className="menuItem">
@@ -23,7 +23,7 @@ export default class Navigation extends Component {
               className="Navigation-link"
               activeClassName="active"
             >
-              Movies
+              Фильмы
             </NavLink>
           </li>
         </ul>
