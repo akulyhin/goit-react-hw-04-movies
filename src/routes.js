@@ -1,5 +1,7 @@
 export default {
   home: "/",
   movies: "/movies",
-  showDetails: "/movies/:movieId",
+  movieDetailsPage: "/movies/:movieId",
+  cast: "/movies/:movieId/cast",
+  reviews: "/movies/:movieId/reviews",
 };

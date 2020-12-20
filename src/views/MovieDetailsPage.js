@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import ApiMovies from "../services/ApiMovies";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import routes from "../routes";
+import Cast from "./Cast";
+import Reviews from "./Reviews";
 
 export default class ShowDetails extends Component {
   state = {
@@ -21,6 +23,7 @@ export default class ShowDetails extends Component {
 
   render() {
     const { movie, error } = this.state;
+    const { match } = this.props;
     const imgURL = `https://image.tmdb.org/t/p/w500`;
 
     return (
@@ -50,6 +53,18 @@ export default class ShowDetails extends Component {
             </div>
           </div>
         )}
+        <hr />
+        <ul>
+          <li>
+            <Link to={`/movies/${match.params.movieId}/cast`}>Cast</Link>
+          </li>
+          <li>
+            <Link to={`/movies/${match.params.movieId}/reviews`}>Reviews</Link>
+          </li>
+        </ul>
+        <hr />
+        <Route path={routes.cast} component={Cast} />
+        <Route path={routes.reviews} component={Reviews} />
       </>
     );
   }
