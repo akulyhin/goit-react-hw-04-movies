@@ -23,4 +23,24 @@ const fetchFilmsWithQuery = (query) => {
     .then((res) => res.data.results);
 };
 
-export default { fetchFilmsTrending, fetchFilmsWithQuery, fetchFilmsDetails };
+const fetchFilmsCast = (movieId) => {
+  return axios
+    .get(`${baseURL}/3/movie/${movieId}/credits?api_key=${apiKey}&language=ru`)
+    .then((res) => res.data.cast);
+};
+
+const fetchFilmsReviews = (movieId) => {
+  return axios
+    .get(
+      `${baseURL}/3/movie/${movieId}/reviews?api_key=${apiKey}&language=en-US&page=1`
+    )
+    .then((res) => res.data.results);
+};
+
+export default {
+  fetchFilmsTrending,
+  fetchFilmsWithQuery,
+  fetchFilmsDetails,
+  fetchFilmsCast,
+  fetchFilmsReviews,
+};

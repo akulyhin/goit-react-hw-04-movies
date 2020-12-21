@@ -53,3 +53,14 @@ code {
   margin-left: 20px;
   width: 65%;
 }
+
+/* CAST */
+.cast img {
+  max-width: 100%;
+  width: 170px;
+}
+
+/* SearchBox */
+.search-input {
+  font-size: 16px;
+}
